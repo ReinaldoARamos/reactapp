@@ -4,11 +4,18 @@ import Card from '../../Card/components'
 
 function home() {
 
+  let studentName = '';
 
+function handleNameChange(name) {
+  studentName = name
+}
   return (
     <div className="container">
-     <h1>Lista de presença</h1>
-     <input type="text" placeholder="insira um nome"/>
+     <h1>Nome: {studentName}</h1>
+     <input type="text" 
+     placeholder="insira um nome"
+     onChange={e => handleNameChange(e.target.value)}
+     />
 
      
      <button>Teste</button>
