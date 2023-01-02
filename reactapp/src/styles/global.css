@@ -1,13 +1,37 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-body, input, button {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+.container h1{
+    margin:  84px 9 24px
+}
 
-    -webkit-font-smoothing: antialiased;
+.container input{
+    width: 50%;
+    padding: 24px;
+
+    background: #E6E;
+    border-radius:  5px;
+    border: none;
+    font-size: 16px;
+}
+
+.container button{
+    width: 50%;
+    padding :24px;
+    font-weight:  700;
+    border-radius:  5px;
+    color: #FFF;
+    background-color: aqua;
+    border: none;
+    margin: 12px 0 84px;
+    transition: filter 0.2s;
+    cursor: pointer;
+    font-size: 16px;
+}   
+
+.container button:hover{
+    filter: brightness(0.9)
 }
