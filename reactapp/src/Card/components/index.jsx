@@ -1,9 +1,9 @@
-//import './style.css'
+import './style.css'
 
  function Card(){
     return(
-        <div>
-            <strong>Reinaldo</strong>
+        <div className='Card'>
+            <strong >Reinaldo</strong>
             <small>16:52</small>
         </div>
     )

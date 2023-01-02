@@ -13,6 +13,8 @@ function home() {
      
      <button>Teste</button>
      <Card />
+     <Card />
+     <Card />
     </div>
    
   )
