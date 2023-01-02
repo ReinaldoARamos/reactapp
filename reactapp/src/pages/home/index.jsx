@@ -12,9 +12,9 @@ function home() {
 
      
      <button>Teste</button>
-     <Card />
-     <Card />
-     <Card />
+     <Card name="Reinaldo" time="17:35"/>
+     <Card name="Dario" time="17:36"/>
+     <Card name="Lucas" time="17:39" />
     </div>
    
   )
