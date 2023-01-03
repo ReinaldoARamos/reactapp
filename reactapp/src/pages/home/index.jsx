@@ -10,7 +10,7 @@ function home() {
 
   function AddStudent() {
     const newStudent ={
-      name: setStudentName,
+      name: studentName,
       time: new Date().toLocaleDateString("pt-br",
        {
         hour: '2-digit',
@@ -31,7 +31,7 @@ function home() {
      />
 
      
-     <button>Teste</button>
+     <button onClick={AddStudent}>Teste</button>
      {
       students.map(student => <Card name={student.name} time={student.time}/>)
       
