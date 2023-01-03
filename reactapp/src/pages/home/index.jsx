@@ -26,8 +26,8 @@ function home() {
     //vetores dentro de outros vetores
   }
 
-  useEffect(()=> {console.log("Chamando use")}, 
-  [students, setStudentName])
+  useEffect(()=> {console.log("Chamando use")},  //adicionamos a função e o estado em que ele está atrelado
+  [students, setStudentName]) //cada vezque esses elementos serem alterados o useEffect ativa
   return (
     <div className="container">
     
