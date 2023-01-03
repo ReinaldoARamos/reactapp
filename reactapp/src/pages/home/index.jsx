@@ -7,6 +7,7 @@ function home() {
 
   const [studentName, setStudentName] = useState()  //ao usar o state passamos a variável e a função que atualzia o estado
   const [students, setStudents] = useState([]);
+  const [user, setUser] = useState({name: '', avatar: ''});
 
   function AddStudent() {
     const newStudent ={
@@ -26,16 +27,29 @@ function home() {
     //vetores dentro de outros vetores
   }
 
-  useEffect(()=> {console.log("Chamando use")},  //adicionamos a função e o estado em que ele está atrelado
-  [students, setStudentName]) //cada vezque esses elementos serem alterados o useEffect ativa
+  useEffect(()=> {
+    fetch('https://api.github.com/users/ReinaldoARamos')
+    .then(response => response.json())
+    .then(data => {
+      setUser({
+        name: data.name,
+        avatar: data.avatar_url
+      })
+    })
+    .catch(error => console.log(error))
+    
+  }, 
+  [])
+   //adicionamos a função e o estado em que ele está atrelado
+  //cada vezque esses elementos serem alterados o useEffect ativa
   return (
     <div className="container">
     
     <header>
     <h1>Lista de presença</h1>
     <div>
-    <strong>Reinaldo Ramos</strong>
-    <img src='https://upload.wikimedia.org/wikipedia/en/3/33/Catra.png ' alt='foto'/>
+    <strong>{user.name}</strong>
+    <img src={user.avatar} alt='foto'/>
 
     </div>
     
