@@ -1,7 +1,7 @@
 import './style.css'
 
 import Card from '../../Card/components'
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 
 function home() {
 
@@ -26,6 +26,8 @@ function home() {
     //vetores dentro de outros vetores
   }
 
+  useEffect(()=> {console.log("Chamando use")}, 
+  [students, setStudentName])
   return (
     <div className="container">
     
