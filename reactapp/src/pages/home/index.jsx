@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function home() {
 
-  const [studentName, setStudentName] = useState()
+  const [studentName, setStudentName] = useState()  //ao usar o state passamos a variável e a função que atualzia o estado
   return (
     <div className="container">
      <h1>Nome: {studentName}</h1>
