@@ -37,7 +37,7 @@ function home() {
      
      <button onClick={AddStudent}>Teste</button>
      {
-      students.map(student => <Card name={student.name} time={student.time}/>)
+      students.map(student => <Card key={student.time} name={student.name} time={student.time}/>)
       
       }
      
