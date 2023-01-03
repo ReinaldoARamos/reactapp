@@ -19,7 +19,11 @@ function home() {
       })
     };
 
-    setStudents([newStudent])
+    setStudents(prevState => [...prevState, newStudent])
+    //criei uma arrow function que irá pegar o estado anterior,guardar e adicionar um novo
+    //pois em react o estado não se altera, nesse caso criamos um novo encima do outro
+    //os "..." são um spread, para queele adicione vetores como itens separados e nao
+    //vetores dentro de outros vetores
   }
 
   return (
