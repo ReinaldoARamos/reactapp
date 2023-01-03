@@ -1,20 +1,17 @@
 import './style.css'
 
 import Card from '../../Card/components'
+import { useState } from 'react';
 
 function home() {
 
-  let studentName = '';
-
-function handleNameChange(name) {
-  studentName = name
-}
+  const [studentName, setStudentName] = useState()
   return (
     <div className="container">
      <h1>Nome: {studentName}</h1>
      <input type="text" 
      placeholder="insira um nome"
-     onChange={e => handleNameChange(e.target.value)}
+     onChange={e => setStudentName(e.target.value)}
      />
 
      
