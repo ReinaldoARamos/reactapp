@@ -28,7 +28,17 @@ function home() {
 
   return (
     <div className="container">
-     <h1>Nome: {studentName}</h1>
+    
+    <header>
+    <h1>Lista de presença</h1>
+    <div>
+    <strong>Reinaldo Ramos</strong>
+    <img src='https://upload.wikimedia.org/wikipedia/en/3/33/Catra.png ' alt='foto'/>
+
+    </div>
+    
+    </header>
+    
      <input type="text" 
      placeholder="insira um nome"
      onChange={e => setStudentName(e.target.value)}
